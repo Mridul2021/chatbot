@@ -71,6 +71,7 @@ const Chat = ({ chatId, onSendMessage }) => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const boxHeight = isSmallScreen ? '80vh' : '90vh';
+    const listHeight = isSmallScreen ? '55vh' : '62vh';
     const boxStyle = {
         marginTop: '1vh',
         marginLeft: '2.5vw',
@@ -84,6 +85,10 @@ const Chat = ({ chatId, onSendMessage }) => {
         bgcolor: '#FFFF',
         position: 'relative',
     };
+    const listStyle = {
+        maxHeight: listHeight, 
+        overflowY: 'auto'
+    };
     return (
         <Box
             style={boxStyle}
@@ -91,7 +96,7 @@ const Chat = ({ chatId, onSendMessage }) => {
             <Typography variant="h5" align="center" paddingTop="4vh">
                 Ask Me Anything
             </Typography>
-            <List style={{ maxHeight: isSmallScreen ? '53vw' : '60vw', overflowY: 'auto' }}>
+            <List style={listStyle}>
                 {messages.map((msg, index) => (
                     <ListItem key={index}>
                         <ListItemText primary={msg.text} />
