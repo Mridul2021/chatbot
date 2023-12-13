@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
@@ -99,10 +98,10 @@ function App() {
             path="/"
             element={
               <ChatPage sx>
-                <Typography variant="h3" align="center" style={{ marginTop: '40vh' }}>
+                <Typography variant="h3" align="center" style={{ marginTop: '30%' }}>
                   Welcome to LongShotAI, Your personal AI Assistant
                 </Typography>
-                <Typography variant="h5" align="center" style={{ marginTop: '2vh' }}>
+                <Typography variant="h5" align="center" style={{ marginTop: '2%' }}>
                   click on the top left icon to use the features
                 </Typography>
               </ChatPage>
