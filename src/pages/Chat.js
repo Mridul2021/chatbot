@@ -6,7 +6,7 @@ import {
     Typography,
     List,
     useMediaQuery,
-    theme,
+    useTheme,
     ListItem,
     ListItemText,
     CircularProgress,
@@ -68,8 +68,9 @@ const Chat = ({ chatId, onSendMessage }) => {
         }
 
     };
+    const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const boxHeight = isSmallScreen ? '75vh' : '90vh';
+    const boxHeight = isSmallScreen ? '80vh' : '90vh';
     const boxStyle = {
         marginTop: '1vh',
         marginLeft: '2.5vw',
@@ -116,7 +117,6 @@ const Chat = ({ chatId, onSendMessage }) => {
                     color="secondary"
                     onClick={handleSendMessage}
                     style={{ marginLeft: 8 }}
-
                 >
                     {loading ? <CircularProgress size={24} /> : 'Send'}
                 </Button>
