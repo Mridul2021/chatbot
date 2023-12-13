@@ -5,6 +5,8 @@ import {
     Box,
     Typography,
     List,
+    useMediaQuery,
+    theme,
     ListItem,
     ListItemText,
     CircularProgress,
@@ -66,21 +68,24 @@ const Chat = ({ chatId, onSendMessage }) => {
         }
 
     };
-
-
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const boxHeight = isSmallScreen ? '75vh' : '90vh';
+    const boxStyle = {
+        marginTop: '1vh',
+        marginLeft: '2.5vw',
+        paddingLeft: '40px',
+        paddingRight: '30px',
+        width: '70vw',
+        height: boxHeight,
+        borderRadius: 7,
+        boxShadow: 5,
+        borderColor: '#263238',
+        bgcolor: '#FFFF',
+        position: 'relative',
+    };
     return (
         <Box
-            marginTop="1vh"
-            marginLeft="5vw"
-            paddingLeft='40px'
-            paddingRight="30px"
-            width="70vw"
-            height="90vh"
-            borderRadius={7}
-            boxShadow="5"
-            borderColor='#263238'
-            bgcolor="#FFFF"
-            position="relative"
+            style={boxStyle}
         >
             <Typography variant="h5" align="center" paddingTop="4vh">
                 Ask Me Anything
