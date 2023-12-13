@@ -102,7 +102,7 @@ function App() {
                   Welcome to LongShotAI, Your personal AI Assistant
                 </Typography>
                 <Typography variant="h5" align="center" style={{ marginTop: '2%' }}>
-                  click on the top left icon to use the features
+                  click on the top left icon and click new page to use the features
                 </Typography>
               </ChatPage>
             }
