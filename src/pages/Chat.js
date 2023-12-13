@@ -91,7 +91,7 @@ const Chat = ({ chatId, onSendMessage }) => {
             <Typography variant="h5" align="center" paddingTop="4vh">
                 Ask Me Anything
             </Typography>
-            <List style={{ maxHeight: "58vh", overflowY: 'auto' }}>
+            <List style={{ maxHeight: isSmallScreen ? '53vw' : '60vw', overflowY: 'auto' }}>
                 {messages.map((msg, index) => (
                     <ListItem key={index}>
                         <ListItemText primary={msg.text} />
