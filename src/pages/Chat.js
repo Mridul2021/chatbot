@@ -46,7 +46,7 @@ const Chat = ({ chatId, onSendMessage }) => {
                     },
                     {
                         headers: {
-                            Authorization: `Bearer 6cfa62ab4dbe973e26dbc831f6e2863bf99b67ed`,
+                            Authorization: `Bearer 656171c4dbfdf75a99a22fa21e538f8fba2671d3`,
                         },
                     }
                 );
